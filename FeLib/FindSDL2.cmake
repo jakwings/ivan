@@ -66,14 +66,10 @@
 #  License text for the above reference.)
 
 SET(SDL2_SEARCH_PATHS
-	~/Library/Frameworks
 	/Library/Frameworks
-	/usr/local
 	/usr
-	/sw # Fink
-	/opt/local # DarwinPorts
-	/opt/csw # Blastwave
-	/opt
+        # other paths like ~/Library/Frameworks and /usr/local
+        # should be provided by $ENV{SDL2DIR}
 )
 
 # CPU architecture detection for MSVC
