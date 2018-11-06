@@ -1,6 +1,6 @@
 # If you want to set up another Travis CI service for your fork (not branch),
 # you can alter it to disable tests and notification for the official repo.
-if: repo = Attnam/ivan
+#if: repo = Attnam/ivan
 
 sudo: required
 dist: trusty
