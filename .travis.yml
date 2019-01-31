@@ -1,6 +1,6 @@
 # If you want to set up another Travis CI service for your fork (not branch),
 # you can alter it to disable tests and notification for the official repo.
-if: repo = Attnam/ivan
+#if: repo = Attnam/ivan
 
 sudo: required
 dist: trusty
@@ -10,42 +10,6 @@ language: cpp
 matrix:
 
   include:
-
-    - env: CXXFLAGS= IVAN_PLATFORM=
-      os: linux
-      compiler: clang
-
-    - env: CXXFLAGS=-DWIZARD IVAN_PLATFORM=
-      os: linux
-      compiler: clang
-
-    - env: CXXFLAGS= IVAN_PLATFORM=
-      os: osx
-      compiler: clang
-
-    - env: CXXFLAGS=-DWIZARD IVAN_PLATFORM=
-      os: osx
-      compiler: clang
-
-    - env: CXXFLAGS= IVAN_PLATFORM=
-      os: linux
-      compiler: gcc
-
-    - env: CXXFLAGS=-DWIZARD IVAN_PLATFORM=
-      os: linux
-      compiler: gcc
-
-    - env: CXXFLAGS= IVAN_PLATFORM=
-      os: osx
-      compiler: gcc
-
-    - env: CXXFLAGS=-DWIZARD IVAN_PLATFORM=
-      os: osx
-      compiler: gcc
-
-    - env: CXXFLAGS=-DWIZARD IVAN_PLATFORM=win
-      os: linux
-      compiler: gcc
 
     - env: CXXFLAGS=-DWIZARD IVAN_PLATFORM=osx SDL2DIR=$HOME/Thirdparty/Frameworks
       os: osx
@@ -90,6 +54,6 @@ deploy:
     - $IVAN_BUILD_DIR/$IVAN_PLATFORM/*.dmg
   on:
     condition: '"$IVAN_PLATFORM" =~ ^(win|osx)$'
-    repo: Attnam/ivan
+    #repo: Attnam/ivan
     tags: true
-    branch: master
+    #branch: master
